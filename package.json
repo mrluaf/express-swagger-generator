@@ -1,6 +1,6 @@
 {
-  "name": "express-swagger-generator",
-  "title": "express-swagger-generator",
+  "name": "expressjs-swagger-generator",
+  "title": "expressjs-swagger-generator",
   "version": "2.1.2",
   "description": "Generate swagger documentation automatically using joi validation.",
   "main": "dist/index.js",
@@ -34,12 +34,6 @@
     "openapi"
   ],
   "license": "MIT",
-  "maintainers": [
-    {
-      "name": "Nguyen Van Tai",
-      "email": "vantai.nguyen@hotmail.com"
-    }
-  ],
   "dependencies": {
     "@hapi/joi": "^17.1.0",
     "@joi/date": "^2.1.0",
