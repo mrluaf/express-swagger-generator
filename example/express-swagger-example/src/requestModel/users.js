@@ -1,4 +1,4 @@
-const Joi = require("@hapi/joi");
+const Joi = require('joi');
 /**
  * File name for request and response model should be same as router file.
  * Define request model with there order in router js.

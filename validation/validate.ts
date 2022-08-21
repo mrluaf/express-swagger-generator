@@ -1,5 +1,5 @@
 'use strict';
-import Joi from '@hapi/joi'
+import Joi from 'joi'
 import ValidationError from './validation-error'
 import { assignIn, find, defaults } from 'lodash'
 

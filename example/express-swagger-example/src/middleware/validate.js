@@ -1,5 +1,5 @@
 'use strict';
-const Joi = require("@hapi/joi");
+const Joi = require('joi');
 var assignIn = require('lodash/assignIn');
 var find = require('lodash/find');
 var defaults = require('lodash/defaults');
