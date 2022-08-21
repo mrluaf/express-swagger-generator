@@ -3,7 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./src/routes/index');
+var homeRouter = require('./src/routes/home');
 var usersRouter = require('./src/routes/users');
 const swagger = require("expressjs-swagger-generator");
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', homeRouter);
 app.use('/users', usersRouter);
 
 app.use(function (err, req, res, next) {
