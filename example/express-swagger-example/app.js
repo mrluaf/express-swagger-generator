@@ -5,7 +5,7 @@ var logger = require('morgan');
 
 var homeRouter = require('./src/routes/home');
 var usersRouter = require('./src/routes/users');
-const swagger = require("expressjs-swagger-generator");
+const swagger = require("../../dist");
 
 var app = express();
 
@@ -39,16 +39,16 @@ const options = {
             in: 'header'
         }
     },
-    security: [{
-        Bearer: []
-    }],
-    defaultSecurity: 'Bearer'
+    // security: [{
+    //     Bearer: []
+    // }],
+    // defaultSecurity: 'Bearer'
 };
 
 swagger.serveSwagger(app, "/swagger", options, {
-    routePath: './src/routes/',
-    requestModelPath: './src/requestModel',
-    responseModelPath: './src/responseModel'
+    routePath: '../example/express-swagger-example/src/routes/',
+    requestModelPath: '../example/express-swagger-example/src/requestModel',
+    responseModelPath: '../example/express-swagger-example/src/responseModel'
 });
 
 module.exports = app;

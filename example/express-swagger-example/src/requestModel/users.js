@@ -6,47 +6,70 @@ const Joi = require('joi');
  */
 module.exports = {
     // Here 0 is the order of api route file.
-    0: {
+    // 0: {
+    //     excludeFromSwagger: false
+    // },
+    createUser: {
         body: {
             firstName: Joi.string().required(),
             lastName: Joi.string().required(),
             address: Joi.string().required(),
             contact: Joi.number().required()
         },
-        model: "createUser",
+        // model: "createUser",
         group: "User",
-        description: "Create user and save details in database"
+        // description: "Create user and save details in database"
     },
-    1: {
-        query: {},
-        path: {}, // Define for api path param here.
-        header: {}, // Define if header required.
+    updateUser: {
+        body: {
+            firstName: Joi.string().required(),
+            lastName: Joi.string().required(),
+            address: Joi.string().required(),
+            contact: Joi.number().required()
+        },
+        // model: "updateUser",
         group: "User",
-        model: "getUsers",
-        description: "Get All User"
+        // description: "Cập nhật User"
+    },
+    // 1: {
+    //     query: {},
+    //     path: {}, // Define for api path param here.
+    //     header: {}, // Define if header required.
+    //     group: "User",
+    //     model: "getUsers",
+    //     description: "Get All User"
+    // },
+    // 2: {
+    //     body: {
+    //         firstName: Joi.string().required(),
+    //         lastName: Joi.string().required(),
+    //         address: Joi.string().required(),
+    //         contact: Joi.number().required()
+    //     },
+    //     model: "updateUser",
+    //     group: "User",
+    //     description: "Update User"
+    // },
+    // 3: {
+    //     query: {},
+    //     path: {
+    //         userId: Joi.number().required()
+    //     }, // Define for api path param here.
+    //     header: {}, // Define if header required.
+    //     model: 'getUserDetails',
+    //     group: "User",
+    //     description: "Get user details"
+    // },
+    1: {
+        excludeFromSwagger: false
     },
     2: {
-        body: {
-            firstName: Joi.string().required(),
-            lastName: Joi.string().required(),
-            address: Joi.string().required(),
-            contact: Joi.number().required()
-        },
-        model: "updateUser",
-        group: "User",
-        description: "Update User"
+        excludeFromSwagger: false
     },
     3: {
-        query: {},
-        path: {
-            userId: Joi.number().required()
-        }, // Define for api path param here.
-        header: {}, // Define if header required.
-        model: 'getUserDetails',
-        group: "User",
-        description: "Get user details"
-    },
-    4: {
         excludeFromSwagger: false
-    }
+    },
+    // 4: {
+    //     excludeFromSwagger: false
+    // }
 };
