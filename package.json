@@ -1,7 +1,7 @@
 {
-  "name": "swagger-generator-express",
-  "title": "swagger-generator-express",
-  "version": "2.1.1",
+  "name": "express-swagger-generator",
+  "title": "express-swagger-generator",
+  "version": "2.1.2",
   "description": "Generate swagger documentation automatically using joi validation.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,14 +12,15 @@
     "build:watch": "tsc --watch",
     "prepublish": "tsc"
   },
-  "author": {
-    "name": "systango-technologies",
-    "email": "engineering@systango.com"
+  "author": "Nguyen Van Tai <nguyenvantai.vn>",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/mrluaf/express-swagger-generator/issues"
   },
-  "homepage": "https://github.com/SystangoTechnologies/swagger-generator-express/blob/master/README.md",
+  "homepage": "https://github.com/mrluaf/express-swagger-generator/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SystangoTechnologies/swagger-generator-express"
+    "url": "https://github.com/mrluaf/express-swagger-generator.git"
   },
   "keywords": [
     "swagger",
@@ -35,17 +36,18 @@
   "license": "MIT",
   "maintainers": [
     {
-      "name": "systango-technologies",
-      "email": "engineering@systango.com"
+      "name": "Nguyen Van Tai",
+      "email": "vantai.nguyen@hotmail.com"
     }
   ],
   "dependencies": {
     "@hapi/joi": "^17.1.0",
+    "@joi/date": "^2.1.0",
     "@types/hapi__joi": "^16.0.12",
     "@types/joi": "^14.3.4",
     "express": "^4.17.1",
-    "joi": "^14.3.1",
-    "joi-to-swagger": "^4.0.0",
+    "joi": "^17.4.2",
+    "joi-to-swagger": "^6.1.0",
     "lodash": "^4.17.15",
     "swagger-spec-express": "^2.0.23",
     "swagger-ui-express": "^4.1.3"

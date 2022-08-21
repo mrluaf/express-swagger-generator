@@ -1,6 +1,8 @@
 # swagger-generator-express
 
 NPM module to generate swagger documentation for Express APIs with minimum additional effort.
+This package fork from https://github.com/SystangoTechnologies/swagger-generator-express
+It just custom and update Joi and Joi to Swagger lib to latest version.
 
 >[![Downloads](https://badgen.net/npm/dt/swagger-generator-express)](https://www.npmjs.com/package/swagger-generator-express) [![npm dependents](https://badgen.net/npm/dependents/swagger-generator-express)](https://www.npmjs.com/package/swagger-generator-express?activeTab=dependents)
 
