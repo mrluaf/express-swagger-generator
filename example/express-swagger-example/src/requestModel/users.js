@@ -51,14 +51,14 @@ module.exports = {
         group: "User",
         // excludeFromSwagger: true,
     },
-    // 1: {
-    //     query: {},
-    //     path: {}, // Define for api path param here.
-    //     header: {}, // Define if header required.
-    //     group: "User",
-    //     model: "getUsers",
-    //     description: "Get All User"
-    // },
+    getUsers: {
+        query: {},
+        path: {}, // Define for api path param here.
+        header: {}, // Define if header required.
+        group: "User",
+        model: "getUsers",
+        description: "Get All User"
+    },
     // 2: {
     //     body: {
     //         firstName: Joi.string().required(),
@@ -80,15 +80,15 @@ module.exports = {
     //     group: "User",
     //     description: "Get user details"
     // },
-    1: {
-        excludeFromSwagger: false
-    },
-    2: {
-        excludeFromSwagger: false
-    },
-    3: {
-        excludeFromSwagger: false
-    },
+    // 1: {
+    //     excludeFromSwagger: false
+    // },
+    // 2: {
+    //     excludeFromSwagger: false
+    // },
+    // 3: {
+    //     excludeFromSwagger: false
+    // },
     // 4: {
     //     excludeFromSwagger: false
     // }
