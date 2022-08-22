@@ -39,7 +39,7 @@ router.get('/:userId', userController.getUserDetails);
 
 /**
  * Xóa User
- * @summary deleteUser
+ * @summary Xóa người dùng
  * @model deleteUser
  * @route delete /:userId/:path1/:path2
  * @security [{ "Bearer": ["ADMIN"] }]

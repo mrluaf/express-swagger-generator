@@ -187,14 +187,15 @@ function getQueryAndPathParamObj(schema: any, value: string, describe: any) {
       arr.push(key);
       const query = schema[key];
       const bodyParameter = j2s(schema[key]).swagger;
-      // // console.log('bodyParameter:::', bodyParameter, );
+      // console.log('bodyParameter:::', bodyParameter);
 
       const queryObject = {
-        ...bodyParameter,
         name: key,
         type: query.type ? query.type : query,
         required: query.required === 'undefined' ? false : true,
+        ...bodyParameter,
       };
+      // console.log('queryObject::::', queryObject);
       if (query._flags && query._flags.presence) {
         queryObject.required = query._flags.presence === 'required' ? true : false;
       }
@@ -466,7 +467,7 @@ function processRouter(item: any, requestModel: any, responseModel: any, routerN
       return item;
     }
   } catch (error) {
-    // console.log('error:::::', error);
+    console.log('Error in processRouter::', error);
     console.log(`Error in processRouter:: ${error}`);
     return;
   }

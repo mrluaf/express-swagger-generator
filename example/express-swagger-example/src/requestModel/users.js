@@ -1,4 +1,4 @@
-const Joi = require('joi');
+const Joi = require('joi').extend(require('@joi/date'));
 /**
  * File name for request and response model should be same as router file.
  * Define request model with there order in router js.
@@ -11,8 +11,9 @@ module.exports = {
     // },
     createUser: {
         body: {
-            firstName: Joi.string().required(),
+            firstName: Joi.string().required().description('Họ của người dùng'),
             lastName: Joi.string().required(),
+            birthDay: Joi.date().format('YYYY-MM-DD'),
             address: Joi.string().required(),
             contact: Joi.number().required()
         },
@@ -34,15 +35,16 @@ module.exports = {
     },
     getUserDetails: {
         query: {
-            firstName: Joi.string().required(),
-            role: Joi.string().valid('ios', 'android'),
+            firstName: Joi.string().required().description('Họ của người dùng'),
+            birthDay: Joi.date().format('YYYY-MM-DD'),
+            role: Joi.string().valid('ios', 'android').description('Quyền truy cập'),
         },
         model: "getUserDetails",
         group: "User",
     },
     deleteUser: {
         path: {
-            path1: Joi.string().required(),
+            path1: Joi.string().required().description('Mô tả cho Path 1'),
             path2: Joi.string().valid('ios', 'android'),
         },
         model: "deleteUser",
