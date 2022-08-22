@@ -16,7 +16,7 @@ module.exports = {
             address: Joi.string().required(),
             contact: Joi.number().required()
         },
-        // model: "createUser",
+        model: "createUser",
         group: "User",
         // description: "Create user and save details in database"
     },
@@ -25,11 +25,29 @@ module.exports = {
             firstName: Joi.string().required(),
             lastName: Joi.string().required(),
             address: Joi.string().required(),
-            contact: Joi.number().required()
+            contact: Joi.number().required(),
+            role: Joi.string().valid('ios', 'android'),
         },
-        // model: "updateUser",
+        model: "updateUser",
         group: "User",
         // description: "Cập nhật User"
+    },
+    getUserDetails: {
+        query: {
+            firstName: Joi.string().required(),
+            role: Joi.string().valid('ios', 'android'),
+        },
+        model: "getUserDetails",
+        group: "User",
+    },
+    deleteUser: {
+        path: {
+            path1: Joi.string().required(),
+            path2: Joi.string().valid('ios', 'android'),
+        },
+        model: "deleteUser",
+        group: "User",
+        // excludeFromSwagger: true,
     },
     // 1: {
     //     query: {},

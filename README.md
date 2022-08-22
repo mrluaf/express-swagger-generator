@@ -1,5 +1,11 @@
 # swagger-generator-express
 
+**Importante**
+You must use Joi version same with this package.
+```sh
+npm i --save joi@17.4.2
+```
+
 NPM module to generate swagger documentation for Express APIs with minimum additional effort.
 This package fork from https://github.com/SystangoTechnologies/swagger-generator-express
 It just custom and update Joi and Joi to Swagger lib to latest version.

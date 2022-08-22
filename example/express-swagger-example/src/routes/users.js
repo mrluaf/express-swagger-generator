@@ -28,9 +28,23 @@ router.get('/', userController.getUsers);
  */
 router.put('/:userId', userController.updateUser);
 
+/**
+ * Lấy thông tin chi tiết của User
+ * @summary Lấy thông tin chi tiết của User
+ * @model getUserDetails
+ * @route get /:userId
+ * @security [{ "Bearer": ["ADMIN"] }]
+ */
 router.get('/:userId', userController.getUserDetails);
 
-router.delete('/:userId', userController.deleteUser);
+/**
+ * Xóa User
+ * @summary deleteUser
+ * @model deleteUser
+ * @route delete /:userId/:path1/:path2
+ * @security [{ "Bearer": ["ADMIN"] }]
+ */
+router.delete('/:userId/:path1/:path2', userController.deleteUser);
 
 
 module.exports = router;
