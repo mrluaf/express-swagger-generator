@@ -1,7 +1,7 @@
 {
   "name": "expressjs-swagger-generator",
   "title": "expressjs-swagger-generator",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Generate swagger documentation automatically using joi validation.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
